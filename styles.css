@@ -21,3 +21,20 @@ p {
     transform: scale(1.1);
     filter: brightness(0.75)
 }
+
+#show-village {
+    width: clamp(10px, 180px, 220px);
+    background-color: rgb(0, 130, 0);
+    color: rgb(255, 255, 255);
+    transition-duration: 0.3s;
+    margin-left: 8rem;
+}
+
+#show-village:hover {
+    background-color: rgba(0, 115, 0, 0.9)
+}
+
+#village-map {
+    margin-left: 6.7rem;
+    min-width: 200px;
+}
