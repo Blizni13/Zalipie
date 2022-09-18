@@ -3,7 +3,7 @@ const villageMap = document.getElementById('village-map')
 
 showVillageLocation.onclick = () => {
     villageMap.classList.toggle('d-block')
-    if(villageMap.classList[6] === 'd-none') {
+    if(villageMap.classList[1] === 'd-none') {
         villageMap.classList.remove('d-none')
     } else {
         villageMap.classList.add('d-none')
