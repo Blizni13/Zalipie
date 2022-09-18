@@ -20,11 +20,11 @@
             </div>
 
             <div class="row">
-                    <h2 class="col-4 text-end mt-3">What is Zalipie?</h2>
+                    <h2 class="col-lg-4 col-md-7 col-sm-7 col-7 mt-5 mb-3 text-end">What is Zalipie?</h2>
 
-                    <div class="col-8"></div> <!-- blank columns placeholder -->
+                    <div class="col-8 col-md-7"></div> <!-- blank columns placeholder -->
 
-                    <p class="w-50 mx-auto py-2">
+                    <p class="w-50 mx-auto mb-5">
                         Zalipie is perhaps one of the most beautiful villages in Poland, but surely the most colorful one. 
                         It is known for its tradition of painting special, folksy flower patterns.
                         The whole village is painted and it charms people with its special atmosphere. 
@@ -32,7 +32,7 @@
                         And they are everywhere – not only houses are painted, but also barns, dog kennels, walls, furniture, fences, clothes, you name it!
                     </p>
 
-                    <div class="col-12 d-flex align-items-center justify-content-evenly bg-black bg-opacity-25 py-4 gap-3">
+                    <div class="col-12 d-flex align-items-center justify-content-evenly bg-black bg-opacity-25 py-4 gap-3" id="images-wrapper">
                         <div class="image-wrapper rounded-4">
                             <img class='img-fluid' src="https://www.dzieciochatki.pl/storage/thumbnails/Zdjecia/Wizyt_Art/Zalipie-malowana-wies-adaptive-920x470.jpg">
                         </div>
@@ -46,41 +46,55 @@
                         </div>
                     </div>
 
-                    <h2 class="col-4 text-end mt-4">Where is Zalipie?</h2>
+                    <h2 class="col-lg-4 col-md-7 col-sm-7 col-7 text-end mt-5 mb-3">Where is Zalipie?</h2>
 
-                    <div class="col-8"></div> <!-- blank columns placeholder -->
+                    <div class="col-8 col-md-7"></div> <!-- blank columns placeholder -->
 
-                    <p class="w-50 mx-auto py-2 position-relative">
+                    <p class="w-50 mx-auto position-relative mb-5" id="location">
                         Zalipie is located in Lesser Poland, in the South of Poland. 
                         It is very close to Krakow (something about 100 kilometers). 
                         So if you're in Krakow, the way will take something about hour and a half.
-                        If we look at google maps, we can see that it is between Krakow, Tarnow, Sandomierz and Czestochowa.
-                        <button class="btn position-absolute start-100 top-50 translate-middle-y" id="show-village">Show village location</button>
-                        <img id="village-map" class='position-absolute start-100 top-50 translate-middle-y w-25 rounded-3 d-none' src="https://lh3.googleusercontent.com/KoBzzwyweTZLKbL9D0a8TkDnJTHirzoxlbKOJzqTKDwrt5JPBKDUMaS5X5G9He2VX1b2lVw6w1ethhjB7_IEKSgXC0e4FD4ixtfcgpicwSGouhVtIBzUhtQBV-xJ0QjOrSnbjePTqpelq3mAIdAueHlVlq7unzsyVu2My32LcJtcMgqj8XN4vgS2qIdZLTUxuSDYXlMkGK-x03yd8Ece6Mf19I-yzLuajdd64lcIMturKNP51EtQUEOskS_2lSygbDXnGDaLqnfMHhZqrtD0XaoIBDVGhdR9_OBxL_LQgNRLwxQQMZsjtEOc1avO3N8t6vCrdSykjEl6hFBVw5sHUjKQ5yyIYcFLQYDq5xelSm418jU5l3NysHYnyWBVh-1utFKDdbWeen5DF4eb-Ja7hCpcOnKbnTkLpDSsrwNDjxVQcFFzI1ph0tsc1p_MlKSy9tCaAl3avrJiSJF78DweIaTi5tOs7qo9ssnyCPZvCh7N_iCo6ZFjrR2BtASiYnBgYpelbl5Mky7U0UtPH2kOBcjlvNtTTe1iVMpAG0gCrjCgCmTydD_cOM2v6GoADb0pKJz13hhBZbaNwoYeaAWdaVGbrAXUFtNbK-JE_8G1325fZ88Hmhmv78WeNt_7agJ6j2SInhE3cczRzciWCmIePhTxP75lD7E8sGu2SYoBd9brXkGcuJb_WPcnelc3qT4lOxi51UewyR0dn_A8FOWusOkYcZvTa2UOvUv-TmXcCN_LB0vgYT1nRzH8JNYkcA=w393-h188-no?authuser=0">
+                        If we look at google maps <button class="p-0 m-0" id="show-village">(show village location)</button>, we can see that it is between Krakow, Tarnow, Sandomierz and Czestochowa.
+                        <a target='_blank' href="#" id="village-map-href">
+                            <img id="village-map" class='rounded-3 d-none' src="https://lh3.googleusercontent.com/KoBzzwyweTZLKbL9D0a8TkDnJTHirzoxlbKOJzqTKDwrt5JPBKDUMaS5X5G9He2VX1b2lVw6w1ethhjB7_IEKSgXC0e4FD4ixtfcgpicwSGouhVtIBzUhtQBV-xJ0QjOrSnbjePTqpelq3mAIdAueHlVlq7unzsyVu2My32LcJtcMgqj8XN4vgS2qIdZLTUxuSDYXlMkGK-x03yd8Ece6Mf19I-yzLuajdd64lcIMturKNP51EtQUEOskS_2lSygbDXnGDaLqnfMHhZqrtD0XaoIBDVGhdR9_OBxL_LQgNRLwxQQMZsjtEOc1avO3N8t6vCrdSykjEl6hFBVw5sHUjKQ5yyIYcFLQYDq5xelSm418jU5l3NysHYnyWBVh-1utFKDdbWeen5DF4eb-Ja7hCpcOnKbnTkLpDSsrwNDjxVQcFFzI1ph0tsc1p_MlKSy9tCaAl3avrJiSJF78DweIaTi5tOs7qo9ssnyCPZvCh7N_iCo6ZFjrR2BtASiYnBgYpelbl5Mky7U0UtPH2kOBcjlvNtTTe1iVMpAG0gCrjCgCmTydD_cOM2v6GoADb0pKJz13hhBZbaNwoYeaAWdaVGbrAXUFtNbK-JE_8G1325fZ88Hmhmv78WeNt_7agJ6j2SInhE3cczRzciWCmIePhTxP75lD7E8sGu2SYoBd9brXkGcuJb_WPcnelc3qT4lOxi51UewyR0dn_A8FOWusOkYcZvTa2UOvUv-TmXcCN_LB0vgYT1nRzH8JNYkcA=w393-h188-no?authuser=0">
+                        </a>
                     </p>
 
-                    <div class="basic-info">
-                        <div class="basic-info-section">
-                            <h5>Inhabitants</h3>
-                            <p></p>
+                    <div class="basic-info d-flex align-items-center bg-black text-white py-4 px-2" id="basic-info">
+                        <div class="col-lg-4 text-center">
+                            <h5 class="fs-2 font-monospace">Inhabitants</h3>
+                            <p class="w-50 mx-auto basic-description">Something about 743 people currently live in  Zalipie.</p>
                         </div>
 
-                        <div class="basic-info-section">
-                            <h5>Size</h3>
-                            <p></p>
+                        <div class="col-lg-4 text-center">
+                            <h5 class="fs-2 font-monospace">Size</h3>
+                            <p class="w-50 mx-auto basic-description">Zalipie takes an area of 8.05km<sup>2</sup>.</p>
                         </div>
 
-                        <div class="basic-info-section">
-                            <h5>Established date</h3>
-                            <p></p>
+                        <div class="col-lg-4 text-center">
+                            <h5 class="fs-2 font-monospace">Important date</h3>
+                            <p class="w-50 mx-auto mh-50 basic-description">Zalipie as a painted village was discovered in 1905.</p>
                         </div>
                     </div>
 
-                    <h2>Zalipie nowadays</h2>
+                    <h2 class="col-lg-4 col-md-7 col-sm-7 col-7 text-end mt-5 mb-3">Zalipie nowadays</h2>
 
-                    <p></p>
+                    <div class="col-8 col-md-7"></div> <!-- blank columns placeholder -->
+
+                    <p class="w-50 mx-auto mb-5">
+                        If you are going to Zalipie and expect to see a kind of folklore Disneyland, you might be disappointed. 
+                        The village is not an open-air museum (or skansen), but a place where people still live. Interestingly, 
+                        the inhabitants of Zalipie are not too interested in making money from being a tourist attraction, so 
+                        there are no souvenir shops or fast-food carts there. Of course, there are some houses in Zalipie where 
+                        tourists are welcome to go inside and admire the beautifully decorated interiors, but there is always a 
+                        sign in front of the entrance saying that the house is open to visitors in return for a nominal tip 
+                        “for the paint”. On the other hand, there are also some buildings with signs outside saying that photography 
+                        is forbidden, and the privacy of these people does need to be respected. It’s also important to note that not all of the buildings are decorated. 
+                        The most well-known building in the village, called the House of Painters, is the place to go for a map of all the most interesting places to see.
+                    </p>
             </div>
         </div>
+        <script rel="text/javascript" src="functions.js"></script>
         <!-- JavaScript Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
     </body>
